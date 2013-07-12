@@ -20,7 +20,6 @@ gem 'shotgun'
 group :test do
   gem 'faker'
   gem 'rspec'
-  gem 'debugger'
 end
 
 gem 'oauth'
