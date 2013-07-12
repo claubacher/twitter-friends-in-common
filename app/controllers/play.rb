@@ -3,20 +3,19 @@ get '/play' do
 end
 
 post '/play' do
-  client = Twitter::Client.new(:oauth_token => current_user.token,
-                               :oauth_token_secret => current_user.secret)
-  @mutuals = mutuals?(client, params[:user1], params[:user2])
-  @shared = shared(client, params[:user1], params[:user2])
-  @user1 = params[:user1]
-  @user2 = params[:user2]
-  erb :play
-end
+  begin
+    client = Twitter::Client.new(:oauth_token => current_user.token,
+                                 :oauth_token_secret => current_user.secret)
+    
+    @user1 = params[:user1]
+    @user2 = params[:user2]
 
-def mutuals?(client, handle1, handle2)
-  client.friendship?(handle1, handle2) && client.friendship?(handle2, handle1)
-end
+    @mutuals = mutuals?(client, @user1, @user2)
+    @shared = shared(client, @user1, @user2)
 
-def shared(client, handle1, handle2)
-  ids = client.friend_ids(handle1).all & client.friend_ids(handle2).all
-  ids.map { |id| client.user(id).handle }
+  rescue Twitter::Error
+    @errors = "Twitter client has posted too many requests. Try again later."
+  end 
+
+  erb :results, :layout => false
 end

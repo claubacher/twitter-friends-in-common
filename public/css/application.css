@@ -5,7 +5,7 @@ body{
 	color: #00bbf5;
 }
 .container {
-  margin: 20px auto;
+  margin: 40px auto;
   width: 440px;
   padding: 0px 20px 20px 20px;
 }
@@ -51,7 +51,6 @@ div.login{
 footer {
 	color: #fff;
 	font-size: 12pt;
-	margin-top: 40px;
 }
 footer div {
 	padding: 4px 0;
@@ -65,7 +64,7 @@ footer a:hover {
 	color: #F57B00;
 }
 form#compare{
-	margin: 64px auto 20px auto;
+	margin: 20px auto;
 	width: 440px;
 }
 form .user {
@@ -83,6 +82,7 @@ form .text {
 	padding: 2px;
 	border: none;
 	border-bottom: 1px dotted #00bbf5;
+	color: #aaa;
 }
 form .text:focus {
 	outline: 0;
@@ -93,7 +93,7 @@ form .submit {
 	border: 1px solid #00bbf5;
 	border-radius: 8px;
 	display: block;
-	margin: 20px auto;
+	margin: 40px auto;
 	width: 140px;
 	padding-bottom: 6px;
 }
@@ -106,4 +106,5 @@ form .submit:hover {
 }
 .results ul {
 	list-style-type: none;
+	margin: 8px;
 }
