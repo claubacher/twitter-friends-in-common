@@ -82,7 +82,7 @@ form .text {
 	padding: 2px;
 	border: none;
 	border-bottom: 1px dotted #00bbf5;
-	color: #aaa;
+	color: #00bbf5;
 }
 form .text:focus {
 	outline: 0;
@@ -107,4 +107,11 @@ form .submit:hover {
 .results ul {
 	list-style-type: none;
 	margin: 8px;
+}
+.results a {
+	text-decoration: none;
+	color: #F57B00;
+}
+.results a:hover {
+	text-decoration: underline;	
 }

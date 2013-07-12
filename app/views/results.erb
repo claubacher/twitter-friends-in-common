@@ -2,14 +2,14 @@
 <% if @user1 && @user2 %>
 	<div class="results">
 		<% if @mutuals %>
-			<span><a href="http://twitter.com/<%= @user1 %>">@<%= @user1 %></a> and <a href="http://twitter.com/<%= @user1 %>">@<%= @user2 %></a> follow each other on Twitter, and </span>
+			<span><a href="http://twitter.com/<%= @user1 %>" target="_blank">@<%= @user1 %></a> and <a href="http://twitter.com/<%= @user1 %>" target="_blank">@<%= @user2 %></a> follow each other on Twitter, and </span>
 		<% else %>
-			<span><a href="http://twitter.com/<%= @user1 %>">@<%= @user1 %></a> and <a href="http://twitter.com/<%= @user1 %>">@<%= @user2 %></a> don't follow each other on Twitter, but</span>
+			<span><a href="http://twitter.com/<%= @user1 %>" target="_blank">@<%= @user1 %></a> and <a href="http://twitter.com/<%= @user1 %>" target="_blank">@<%= @user2 %></a> don't follow each other on Twitter, but</span>
 		<% end %>
 		<span>they both follow</span>
 		<ul>
 			<% @shared.each do |handle| %>
-				<li><a href="http://twitter.com/<%= handle %>">@<%= handle %></a></li>
+				<li><a href="http://twitter.com/<%= handle %>" target="_blank">@<%= handle %></a></li>
 			<% end %>
 		</ul>
 	</div>
