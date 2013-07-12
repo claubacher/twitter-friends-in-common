@@ -32,7 +32,6 @@ require APP_ROOT.join('config', 'database')
 
 require 'oauth'
 require 'twitter'
-require 'debugger'
 
 Twitter.configure do |config|
   config.consumer_key = ENV['TWITTER_KEY']
