@@ -1,9 +1,109 @@
+body{
+	background: #fff;
+	font-family: 'Noto Sans', sans-serif;
+	font-size: 18pt;
+	color: #00bbf5;
+}
 .container {
   margin: 20px auto;
-  width: 600px;
+  width: 440px;
   padding: 0px 20px 20px 20px;
-  border: 1px dotted black;
 }
-th {
-  text-align: left;
+header, footer {
+  width: 100%;
+  background: #00bbf5;
+}
+h1 {
+	margin: 20px auto;
+	width: 500px;
+	padding: 6px 0 12px 12px;
+  font-size: 36pt;
+  font-style: italic;
+  letter-spacing: 0.1em;
+  color: #fff;
+}
+div.login{
+	margin: 64px auto;
+	padding: 0;
+	background: #fff;
+	border: 1px solid #00bbf5;
+	border-radius: 8px;
+}
+.login a {
+	text-decoration: none;
+	color: #00bbf5;
+	display: inline-block;
+	margin: 0 auto;
+	width: 340px;
+	padding: 24px 48px;
+}
+.login a:hover {
+	color: #F57B00;
+}
+.login i {
+	padding-left: 8px;
+	padding-right: 8px;
+}
+.login:hover{
+	background: #fff;
+	border: 1px solid #F57B00;
+}
+footer {
+	color: #fff;
+	font-size: 12pt;
+	margin-top: 40px;
+}
+footer div {
+	padding: 4px 0;
+	text-align: center;
+}
+footer a {
+	color: #fff;
+	text-decoration: none;
+}
+footer a:hover {
+	color: #F57B00;
+}
+form#compare{
+	margin: 64px auto 20px auto;
+	width: 440px;
+}
+form .user {
+	display: inline-block;
+}
+.left {
+	margin-right: 16px;	
+}
+.right {
+	margin-left: 12px;
+}
+form .text {
+	width: 156px;
+	margin: 0 auto;
+	padding: 2px;
+	border: none;
+	border-bottom: 1px dotted #00bbf5;
+}
+form .text:focus {
+	outline: 0;
+}
+form .submit {
+	color: #00bbf5;
+	background: #fff;
+	border: 1px solid #00bbf5;
+	border-radius: 8px;
+	display: block;
+	margin: 20px auto;
+	width: 140px;
+	padding-bottom: 6px;
+}
+form .submit:hover {
+	color: #F57B00;
+	border: 1px solid #F57B00;
+}
+.results {
+	color: #F57B00;
+}
+.results ul {
+	list-style-type: none;
 }

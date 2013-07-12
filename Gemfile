@@ -1,4 +1,4 @@
-source :rubygems
+source 'https://rubygems.org'
 
 # PostgreSQL driver
 gem 'pg'
@@ -17,9 +17,12 @@ gem 'rake'
 
 gem 'shotgun'
 
-if Sinatra::Application.development?
-  group :test do
-    gem 'faker'
-    gem 'rspec'
-  end
-end 
+group :test do
+  gem 'faker'
+  gem 'rspec'
+  gem 'debugger'
+end
+
+gem 'oauth'
+gem 'twitter'
+

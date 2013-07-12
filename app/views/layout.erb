@@ -12,12 +12,32 @@
   -->
   <link rel="stylesheet" href="/css/application.css">
 
+  <link href='http://fonts.googleapis.com/css?family=Noto+Sans:400,400italic' rel='stylesheet' type='text/css'>
+  <link href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script src="/js/application.js"></script>
 
-  <title></title>
+  <title>#friendsincommon</title>
 </head>
 <body>
-  <%= yield %>
+  <header>
+    <h1>#friendsincommon</h1>
+  </header>
+  <div class="container">
+    <% if current_user %>
+    <%= erb :play %>
+    <% else %>
+    <%= erb :index %>
+    <% end %>
+  </div>
+  <% if current_user %>
+    <footer>
+      <div>
+        <%= current_user.handle %> |
+        <a href="/logout">log out</a>
+      </div>
+    </footer>
+  <% end %>
 </body>
 </html>

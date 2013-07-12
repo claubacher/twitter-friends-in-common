@@ -1,0 +1,26 @@
+<form method="post" action="/play" id="compare">
+	<div class="user left">
+		<label for="user1">@</label><input class="text" type="text" name="user1">
+	</div>
+	<span style="font-style: italic">&amp;&amp;</span>
+	<div class="user right">
+		<label for="user2">@</label><input class="text" type="text" name="user2">
+	</div>
+	<input class="submit" type="submit" value="compare">
+</form>
+
+<% if @user1 && @user2 %>
+	<div class="results">
+		<% if @mutuals %>
+			<span>@<%= @user1 %> and @<%= @user2 %> follow each other on Twitter, and </span>
+		<% else %>
+			<span>@<%= @user1 %> and @<%= @user2 %> don't follow each other on Twitter, but</span>
+		<% end %>
+		<span>they both follow</span>
+		<ul>
+			<% @shared.each do |handle| %>
+				<li>@<%= handle %></li>
+			<% end %>
+		</ul>
+	</div>
+<% end %>
